@@ -77,6 +77,7 @@ body {
 
     body *:focus {
         outline: none;
+        text-decoration: none;
     }
 
     body a {
@@ -135,10 +136,9 @@ nav {
     margin: 0;
 }
 
-nav:not(.home nav){
-    background-color: rgba(248,223,216,0.9);
-
-}
+    nav:not(.home nav) {
+        background-color: rgba(248,223,216,0.9);
+    }
 
 
     nav a {
@@ -565,6 +565,7 @@ a.artImg {
     position: relative;
     width: 700px;
     margin-right: 80px;
+    z-index: auto;
 }
 
     .home .articleLinks a {
@@ -572,7 +573,6 @@ a.artImg {
         border: none;
         transition: none;
         cursor: default;
-        z-index: 2;
     }
 
         .home .articleLinks a.artclLink img {
@@ -1067,7 +1067,7 @@ section.response:nth-of-type(1) {
 
     .mail .colTitles #newMsgBtn:hover {
         background-color: black;
-        color:#FCC8D5;
+        color: #FCC8D5;
     }
 
 
@@ -1388,11 +1388,12 @@ section div {
         }
 
     .login .categories ul {
-        width: 1000px;
+        width: 800px;
         display: flex;
         text-align: center;
         flex-wrap: wrap;
         padding: 0;
+        margin: 0 auto;
     }
 
         .login .categories ul li img {

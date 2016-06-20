@@ -671,7 +671,7 @@ a.artImg {
     align-items: flex-start;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
-    z-index: 96;
+    z-index: 999;
     transition: all 0.8s,ease-out;
 }
 

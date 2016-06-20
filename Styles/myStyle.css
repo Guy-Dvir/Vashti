@@ -1,5 +1,25 @@
 ﻿/*FONTS*/
 
+
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold_gdi.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-FB02;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book_gdi.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-FB02;
+}
+
 @font-face {
     font-family: 'arbelhagildaregular';
     src: url('../fonts/arbel-webfont.woff') format('woff');
@@ -65,6 +85,16 @@
 }
 
 
+.gotham {
+    font-family: "Gotham-Book" !important;
+    font-style: normal;
+}
+
+.gotham-b {
+    font-family: "Gotham-Bold" !important;
+    font-style: normal;
+}
+
 body {
     direction: rtl;
     background-color: #f8dfd8;
@@ -73,6 +103,11 @@ body {
 
     body p, h1, h2, h3, h4, h5, h6, span, ul, li, a {
         font-family: 'southbold';
+    }
+
+    body *::selection {
+        background-color: black;
+        color: white;
     }
 
     body *:focus {
@@ -207,6 +242,10 @@ nav {
             background-size: cover;
         }
 
+
+article.container {
+    min-width: 1280px;
+}
 
 .logoWrap {
     width: 960px;
@@ -450,13 +489,31 @@ a.artImg {
 /*******************VGNA*******************/
 
 
-.vgna article img {
-    width: 100%;
+.vgna article .artImg {
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -300px;
 }
 
 .vgna article {
     position: relative;
 }
+
+    .vgna article h1 {
+        position: relative;
+    }
+
+        .vgna article h1:before {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 20px;
+            background-image: url('../imgs/recrdIcon.svg');
+            background-repeat: no-repeat;
+            right: -24px;
+            top: 14px;
+        }
 
     .vgna article:after {
         content: "";
@@ -478,20 +535,9 @@ a.artImg {
 
 .home {
     background-image: url('../imgs/homeBg1.png'), url('../imgs/homeBg2.png'), url('../imgs/homeBg3.png'), url('../imgs/homeBg4.png');
-    background-size: 460px,320px,430px,280px;
-    background-position: 100% 100px, 0 0, 520px 20px, 280px 260px;
+    background-size: auto 65vh,auto 85vh,auto 50vh,auto 65vh;
+    background-position: 100% 16vh, 0 0, 40vw 4vh, 22vw 43vh;
     background-repeat: no-repeat;
-}
-
-.bgOverlay {
-    opacity: 0.5;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #f8dfd8;
-    top: 0;
-    left: 0;
-    z-index: 0;
 }
 
 .video main {
@@ -562,7 +608,8 @@ a.artImg {
 /*shapelinks*/
 
 .home .articleLinks {
-    position: relative;
+    top: 30vh;
+    position: absolute;
     width: 700px;
     margin-right: 80px;
     z-index: auto;
@@ -687,7 +734,7 @@ a.artImg {
         font-size: 38px;
         font-weight: 100;
         position: absolute;
-        top: 406px;
+        top: 50%;
         left: 2px;
         z-index: 99;
     }
@@ -696,9 +743,9 @@ a.artImg {
     .sideMenu .sideCloseBtn {
         position: absolute;
         width: 20px;
-        height: 20px;
+        height: 35px;
         background-color: transparent;
-        top: 422px;
+        top: 51%;
         left: 26px;
         z-index: 999;
     }
@@ -708,7 +755,7 @@ a.artImg {
         list-style: none;
         list-style: none;
         width: 200px;
-        height: 62px;
+        height: 48px;
         display: inline-block;
     }
 
@@ -733,7 +780,7 @@ a.artImg {
 }
 
 .sideMenu div a {
-    width: 100%;
+    width: auto;
     font-family: "southextrabold";
     font-size: 28px;
     margin-top: 40px;
@@ -744,7 +791,7 @@ a.artImg {
 }
 
 .sideLinksWrap ul {
-    width: 480px;
+    width: 400px;
     justify-content: space-between;
     padding: 0;
     margin-right: 30px;
@@ -753,8 +800,8 @@ a.artImg {
 .menuTitle {
     display: block;
     position: fixed;
-    z-index: 99;
-    font-size: 10px;
+    z-index: 99999;
+    font-size: 12px;
     border-top: 1px solid black;
     transform: rotate(270deg);
     top: 320px;
@@ -809,12 +856,29 @@ a.artImg {
 }
 
 /********INNERVIDEOPAGE***********/
+
+.vidInner .commentArea .container {
+    min-width: 1250px;
+}
+
 .vidInner article .row {
     padding: 25px 0;
 }
 
 .vidInner .videoBtns {
     margin: 25px 0;
+}
+
+.vidInner .artImg:after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url('../imgs/playIcon.svg');
+    background-repeat: none;
+    background-size: contain;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
 }
 
 /**************BOOKMARKS*************/
@@ -843,7 +907,7 @@ a.artImg {
         color: black;
     }
 
-.bookmarks span {
+.bookmarks span:not(.menuTitle) {
     font-family: "southregular";
     display: block;
     color: #777;
@@ -1180,6 +1244,7 @@ section div {
         }
 
 /*********PROFILEPAGE************/
+
 .profile section {
     padding: 20px 20px;
     margin: 0;
@@ -1229,6 +1294,16 @@ section div {
 .profile .artSnippet {
     margin-bottom: 40px;
 }
+
+    .profile .artSnippet .artImgWrap {
+        min-height: 300px;
+    }
+
+    .profile .artSnippet .videoBtns {
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+    }
 
     .profile .artSnippet section {
         padding: 15px 0 0 0;
@@ -1302,7 +1377,8 @@ section div {
 }
 
     .login .container form a:hover {
-        background-color: #FCC8D5;
+        background-color: black;
+        color: #f8dfd8;
     }
 
 .login .container .logName p {
@@ -1448,3 +1524,33 @@ section div {
         font-family: "southbold" !important;
         font-size: 22px;
     }
+
+
+/*************ABOUT*************/
+
+.about {
+    background-image: url('../imgs/aboutBG.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+    .about article {
+        width: 1050px;
+        height: 79vh;
+        margin: 0 auto;
+    }
+
+
+        .about article section h1 {
+            font-size: 30px;
+        }
+
+        .about article section {
+            width: 410px;
+            line-height: 35px;
+        }
+
+        .about article p {
+            font-family: "arbelhagildaregular";
+            font-size: 14px;
+        }

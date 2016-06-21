@@ -180,14 +180,19 @@ nav {
         display: block;
         margin: -5px 20px;
         color: black;
-        font-size: 11px;
+        font-size: 13px;
         font-family: "southregular";
     }
 
     nav ul {
         list-style: none;
+     
     }
 
+nav > ul{
+   padding:0;
+   min-width:20vw;
+}
     nav .navLinks input {
         display: none;
         height: 20px;
@@ -202,15 +207,25 @@ nav {
         direction: rtl;
     }
 
+nav .navLinks > li{
+        height:25px; 
+        margin-top:-10px;
+
+}
+
+nav .navLinks > li a{
+    margin-top:10px;
+}
+
     nav .navLinks .prvtArea {
         display: none;
         position: absolute;
-        width: 90px;
-        height: 268px;
+        width: 100px;
+        height: 312px;
         padding: 10px;
         background-color: #f8dfd8;
         box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-        top: 32px;
+        top: 34px;
     }
 
         nav .navLinks .prvtArea li:not(:nth-of-type(1)) {
@@ -223,6 +238,7 @@ nav {
             width: 100%;
             text-align: right;
             border: none;
+            font-size:13px;
             transition: all 0.3s, linear;
         }
 
@@ -235,7 +251,7 @@ nav {
             width: 220px;
             margin-top: 10px;
             margin-bottom: 0px;
-            height: 1.6px;
+            height: 2px;
             background-image: url("../imgs/lineRnondDottd.svg");
             background-size: contain;
             background-repeat: repeat-x;
@@ -244,11 +260,11 @@ nav {
 
 
 article.container {
-    min-width: 1280px;
+    min-width: 1080px;
 }
 
 .logoWrap {
-    width: 960px;
+    width: 100%;
 }
 
 .topBar {
@@ -266,7 +282,7 @@ article.container {
         .topBar .breadCrumb a {
             float: left;
             display: block;
-            font-size: 12px;
+            font-size: 13px;
             font-family: "southregular";
         }
 
@@ -755,7 +771,7 @@ a.artImg {
         list-style: none;
         list-style: none;
         width: 200px;
-        height: 48px;
+        height: 58px;
         display: inline-block;
     }
 
@@ -791,10 +807,11 @@ a.artImg {
 }
 
 .sideLinksWrap ul {
-    width: 400px;
+    width: 350px;
     justify-content: space-between;
     padding: 0;
     margin-right: 30px;
+    height:100%;
 }
 
 .menuTitle {
@@ -1534,8 +1551,8 @@ section div {
     background-repeat: no-repeat;
 }
 
-    .about article {
-        width: 1050px;
+    .about article.container {
+        width: 80vw;
         height: 79vh;
         margin: 0 auto;
     }

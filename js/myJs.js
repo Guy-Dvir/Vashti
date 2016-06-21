@@ -6,12 +6,12 @@
 
     $('.sideCloseBtn').click(function () {
         $('.sideMenu').toggleClass('collapsedR');
-
-
-        /*SIDEMENU HOVER*/
-        elHover($('.sideLinksWrap a'));
-        elHover($('.categories a'));
     });
+
+    /*SIDEMENU HOVER*/
+    elHover($('.sideLinksWrap a'));
+    elHover($('.categories a'));
+
 
     function elHover(el) {
         el.hover(function () {
@@ -46,9 +46,9 @@
         $prvt = $('.navLinks .prvtArea');
 
     $prvtP.hover(function () {
-        $prvt.slideToggle();
+        $prvt.slideToggle(100);
     }, function () {
-        $prvt.slideToggle();
+        $prvt.slideToggle(100);
     });
 
 
@@ -58,9 +58,9 @@
         $searchBox = $('.navLinks .searchBox');
 
     $searchBoxP.hover(function () {
-        $searchBox.slideToggle();
+        $searchBox.slideToggle(200);
     }, function () {
-        $searchBox.slideToggle();
+        $searchBox.slideToggle(200);
     });
 
     /**********LOGIN**********/

@@ -171,7 +171,7 @@ nav {
     margin: 0;
 }
 
-    nav:not(.home nav) {
+    nav{
         background-color: rgba(248,223,216,0.9);
     }
 
@@ -341,7 +341,7 @@ article.container {
     justify-content: center;
     align-items: center;
     position: fixed;
-    left: 0;
+    left: 5%;
     margin: -30px 15px;
     color: black;
     z-index: 99;
@@ -385,7 +385,7 @@ article h3:not(.commentBox) {
 
 
 .textContained-r {
-    padding: 0px 130px 50px 0px;
+    padding: 0px 130px 0px 0px;
 }
 
 article p:not(.readIndicator) {
@@ -476,6 +476,10 @@ a.artImg {
 
 /*******************ART COLLECTION*******************/
 
+.artCollection article.container{
+    min-width:1440px;
+}
+
 .artCollection article .row {
     height: 335px;
     margin-bottom: 65px;
@@ -499,17 +503,34 @@ a.artImg {
 
 .artCollection article section .videoBtns {
     position: absolute;
-    left: 0;
+    left: 15px;
     bottom: 0;
 }
 /*******************VGNA*******************/
 
 
+.vgna article .articleMeta{
+    display: flex;
+    flex-direction: row;
+}
+
+.vgna article .articleMeta a{
+        border:none;
+}
+
+.vgna article .articleMeta a span{
+    font-family:"Gotham-Bold";
+    font-size:12px;
+    background-color:pink;
+}
+
 .vgna article .artImg {
     margin: 0;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0 -300px;
+    background-position: 0;
+    min-height:420px;
+    min-width:840px;
 }
 
 .vgna article {
@@ -537,7 +558,7 @@ a.artImg {
         width: 2px;
         background-color: white;
         position: absolute;
-        left: 0;
+        left: 5%;
         top: 40px;
         margin: -60px 27px;
         border-radius: 100px;
@@ -555,7 +576,9 @@ a.artImg {
     background-position: 100% 16vh, 0 0, 40vw 4vh, 22vw 43vh;
     background-repeat: no-repeat;
 }
-
+.home nav:not(.sideMenu){
+  background-color: transparent;
+}
 .video main {
     height: 100vh;
 }
@@ -570,10 +593,10 @@ a.artImg {
     }
 
     .home h2 {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: bolder;
         border-bottom: 3px solid black;
-        width: 133px;
+        width: 143px;
         padding: 4px 0;
         line-height: 15px;
         margin-top: -45px;
@@ -657,48 +680,48 @@ a.artImg {
 
 /*arLinks Locations*/
 #artclLink1 {
-    left: 440px;
-    top: 120px;
+    left: 35vw;
+    top: 20vh;
 }
 
 #artclLink2 {
-    left: 818px;
-    top: 265px;
+    left: 65vw;
+    top: 42vh;
 }
 
 #artclLink3 {
-    left: 730px;
-    top: 190px;
+    left: 57vw;
+    top: 30vh;
 }
 
 #artclLink4 {
-    left: 220px;
-    top: 10px;
+    left: 17vw;
+    top: 2vh;
 }
 
 #artclLink5 {
-    left: -120px;
-    top: 0px;
+    left: -9vw;
+    top: 0;
 }
 
 #artclLink6 {
-    left: 140px;
-    top: 158px;
+    left: 11vw;
+    top: 26vh;
 }
 
 #artclLink7 {
-    left: 510px;
-    top: 130px;
+    left: 40vw;
+    top: 21vh;
 }
 
 #artclLink8 {
-    left: 340px;
-    top: -50px;
+    left: 32vw;
+    top: -10vh;
 }
 
 #artclLink9 {
-    left: 790px;
-    top: 20px;
+    left: 60vw;
+    top: 4vh;
 }
 
 #artclLink10 {
@@ -707,13 +730,13 @@ a.artImg {
 }
 
 #artclLink11 {
-    left: 100px;
-    top: 120px;
+    left: 6vw;
+    top: 20vh;
 }
 
 #artclLink12 {
-    left: 180px;
-    top: 250px;
+    left: 15vw;
+    top:40vh;
 }
 
 /*SIDE MENU*/
@@ -726,7 +749,7 @@ a.artImg {
     width: 500px;
     background-color: #f8dfd8;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     padding: 100px 90px 0 50px;
@@ -771,7 +794,7 @@ a.artImg {
         list-style: none;
         list-style: none;
         width: 200px;
-        height: 58px;
+        height: 63px;
         display: inline-block;
     }
 
@@ -812,6 +835,7 @@ a.artImg {
     padding: 0;
     margin-right: 30px;
     height:100%;
+    margin-top:5%;
 }
 
 .menuTitle {
@@ -821,7 +845,7 @@ a.artImg {
     font-size: 12px;
     border-top: 1px solid black;
     transform: rotate(270deg);
-    top: 320px;
+    top: 50%;
 }
 
 .artclLink {
@@ -829,6 +853,10 @@ a.artImg {
 }
 
 /*************VIDEOPAGE*************/
+
+.video article.container{
+    min-width:1440px;
+}
 
 .video article > .row:not(:nth-of-type(1)) {
     margin-bottom: 100px;
@@ -876,6 +904,10 @@ a.artImg {
 
 .vidInner .commentArea .container {
     min-width: 1250px;
+}
+
+.vidInner article.container{
+    min-width:1440px;
 }
 
 .vidInner article .row {
@@ -1007,6 +1039,10 @@ section.response:nth-of-type(1) {
 }
 
 /****************MAILPAGE**************/
+
+.mail article{
+    min-height:80vh;
+}
 
 .mail article .contactList .contactPerson {
     position: relative;
@@ -1154,6 +1190,10 @@ section.response:nth-of-type(1) {
 
 /***************UPLOADPAGE***********/
 
+.upload main{
+    min-height:80vh;
+}
+
 .upload h1 {
     margin-bottom: 0px;
     margin-top: -20px;
@@ -1202,6 +1242,10 @@ section.response:nth-of-type(1) {
 }
 
 /**********FOLLOWERSPAGE***********/
+
+.follows article{
+    min-height:74vh;
+}
 
 .follows section {
     position: relative;
@@ -1313,7 +1357,7 @@ section div {
 }
 
     .profile .artSnippet .artImgWrap {
-        min-height: 300px;
+        min-height: 330px;
     }
 
     .profile .artSnippet .videoBtns {
@@ -1339,6 +1383,10 @@ section div {
 
 
 /**********LOGIN1*********/
+.login article{
+    min-height:77vh;
+}
+
 .login .container {
     margin-top: 180px;
     width: 660px;

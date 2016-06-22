@@ -190,6 +190,7 @@ nav {
     }
 
 nav > ul{
+   justify-content:flex-end;
    padding:0;
    min-width:20vw;
 }
@@ -332,9 +333,6 @@ article.container {
         z-index: -1;
     }
 
-    .toolTip img {
-    }
-
 .readIndicator {
     display: flex;
     flex-direction: row-reverse;
@@ -461,7 +459,6 @@ section.commentBox {
 }
 
 a.artImg {
-    width: 100%;
     border: none;
     background-color: transparent;
     height: 100%;
@@ -506,12 +503,18 @@ a.artImg {
     left: 15px;
     bottom: 0;
 }
+
+.artCollection .artImg{
+ width: 100%!important;
+}
 /*******************VGNA*******************/
 
 
 .vgna article .articleMeta{
     display: flex;
     flex-direction: row;
+    justify-content:space-between;
+    width:275px;
 }
 
 .vgna article .articleMeta a{
@@ -521,11 +524,14 @@ a.artImg {
 .vgna article .articleMeta a span{
     font-family:"Gotham-Bold";
     font-size:12px;
-    background-color:pink;
+}
+.vgna.prcy article .articleMeta{
+    width:300px;
 }
 
 .vgna.prcy article .articleMeta a span{
     font-family:"southregular"!important;
+    font-size:13px;
 }
 
 .vgna article .artImg {
@@ -756,7 +762,7 @@ a.artImg {
     position: fixed;
     top: 0;
     bottom: 0;
-    padding: 100px 90px 0 50px;
+    padding: 115px 90px 0 50px;
     justify-content: space-around;
     align-items: flex-start;
     border-left: 1px solid black;
@@ -798,7 +804,7 @@ a.artImg {
         list-style: none;
         list-style: none;
         width: 200px;
-        height: 63px;
+        height: 75px;
         display: inline-block;
     }
 
@@ -922,6 +928,11 @@ a.artImg {
     margin: 25px 0;
 }
 
+.vidInner .artImg{
+    background-position:0;
+    width: 100%!important;
+}
+
 .vidInner .artImg:after {
     position: absolute;
     content: "";
@@ -960,7 +971,7 @@ a.artImg {
         color: black;
     }
 
-.bookmarks span:not(.menuTitle) {
+.bookmarks span:not(.menuTitle, .colTitles) {
     font-family: "southregular";
     display: block;
     color: #777;
@@ -1247,8 +1258,8 @@ section.response:nth-of-type(1) {
 
 /**********FOLLOWERSPAGE***********/
 
-.follows article{
-    min-height:74vh;
+.follow article{
+    min-height:78vh;
 }
 
 .follows section {
@@ -1386,7 +1397,7 @@ section div {
     }
 
 
-/**********LOGIN1*********/
+/**********LOGIN*********/
 .login article{
     min-height:77vh;
 }
@@ -1554,6 +1565,10 @@ section div {
                 opacity: 1 !important;
             }
 
+.login .followChoose .fCategories.followers div{
+    padding:0;
+}
+
 .login .followChoose .fCategories.followers section .folMeta {
     position: static;
 }
@@ -1605,7 +1620,7 @@ section div {
 
     .about article.container {
         width: 80vw;
-        height: 79vh;
+        height: 86vh;
         margin: 0 auto;
     }
 

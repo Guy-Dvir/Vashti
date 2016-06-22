@@ -1,5 +1,7 @@
 ﻿-$(document).ready(function () {
 
+
+
     $('.menuTitle').click(function () {
         $('.sideMenu').toggleClass('collapsedR');
     });
@@ -65,6 +67,7 @@
 
     /**********LOGIN**********/
 
+  
     /*stage progress*/
 
     $('#mailNext').click(function () {
@@ -85,9 +88,9 @@
     $('#followNext').click(function () {
         $('.followChoose').toggleClass('hidden');
         $('.loadingStage').toggleClass('hidden');
-        window.setTimeout(function () {
-            window.location.href = "../home.htm";
-        }, 2500);
+      window.setTimeout(function () {
+      window.location.href = "../home.htm";
+    }, 2200);
     });
 
 
@@ -103,11 +106,7 @@
         $(this).parent().children('img:not(.hideImg)').toggleClass('slctdC')
     });
 
-
-
-
-
-
+   
     /***********ARTICLE************/
     /*article indicator*/
 
@@ -160,7 +159,7 @@
 
     repositionLabel();
 
-
+/**************TOOLTIP***************/
 
     $(document.body).bind('mouseup', function (e) {
         var selection;
@@ -176,7 +175,7 @@
             selection.toString() !== '') {
 
             var a = (e.pageX - 20);
-            var b = (e.pageY - 60);
+            var b = (e.pageY - 65);
 
             console.log(a);
             console.log(b);

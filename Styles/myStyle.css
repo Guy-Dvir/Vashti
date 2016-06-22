@@ -524,6 +524,10 @@ a.artImg {
     background-color:pink;
 }
 
+.vgna.prcy article .articleMeta a span{
+    font-family:"southregular"!important;
+}
+
 .vgna article .artImg {
     margin: 0;
     background-size: contain;

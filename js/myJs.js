@@ -353,7 +353,7 @@
     function upFade(c) { c.animate({ top: -55, opacity: 1 }, 'fast'); }
     function downFade(c) { c.animate({ top: 40, opacity: 1 }, 'fast'); }
     function moveEndVert(c) { c.animate({ top: 0, opacity: 0 }, 'fast'); }
-    function leftFade(c) { c.animate({ left: -345, opacity: 1 }, 'fast'); }
+    function leftFade(c) { c.animate({ left: -395, opacity: 1 }, 'fast'); }
     function rightFade(c) { c.animate({ left: -10, opacity: 1 }, 'fast'); }
     function moveEndSides(c) { c.animate({ left: -180, opacity: 0 }, 'fast'); }
 
